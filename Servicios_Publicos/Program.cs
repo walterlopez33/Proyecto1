@@ -162,7 +162,7 @@ class Program
             Console.Clear();
 
             numeroPago = Enumerable.Repeat(0, tamano).ToArray<int>();  //repite y pone valores en los espacios en blanco
-            fecha = Enumerable.Repeat(DateTime.Parse("01/01/0001"), tamano).ToArray<DateTime>(); //  revisar por que no funciona
+            fecha = Enumerable.Repeat(DateTime.Parse("01/01/0001"), tamano).ToArray<DateTime>(); 
             hora = Enumerable.Repeat(TimeOnly.Parse("00:00"), tamano).ToArray<TimeOnly>();
             cedula = Enumerable.Repeat("", tamano).ToArray<string>();
             nombre = Enumerable.Repeat("", tamano).ToArray<string>();
@@ -277,7 +277,7 @@ class Program
 
                     Console.WriteLine("Ingrese el monto de pago cliente:  "); 
                     double PagoCliente = double.Parse(Console.ReadLine());                 
-                    if (PagoCliente < (mPagar - comision))
+                    if (PagoCliente < mPagar)
                     {
                         Console.WriteLine("El Pago del Cliente es menor que el monto adeudado");
                         Console.ReadKey();
@@ -285,7 +285,7 @@ class Program
                     }
                     montoPagaCliente[posicion] = PagoCliente;
                                         
-                    double vueltoCliente = PagoCliente - (mPagar - comision);
+                    double vueltoCliente = PagoCliente - mPagar;
                     vuelto[posicion] = vueltoCliente;
                     Console.WriteLine("El vuelto es de:  " + vueltoCliente);
 
@@ -510,7 +510,7 @@ class Program
 
                 Console.WriteLine("Ingrese el monto de pago cliente:  ");
                 double PagoCliente = double.Parse(Console.ReadLine());
-                if (PagoCliente < (mPagar - comision))
+                if (PagoCliente < mPagar)
                 {
                     Console.WriteLine("El Pago del Cliente es menor que el monto adeudado");
                     Console.ReadKey();
@@ -518,7 +518,7 @@ class Program
                 }
                 montoPagaCliente[posVector] = PagoCliente;
 
-                double vueltoCliente = PagoCliente - (mPagar - comision);
+                double vueltoCliente = PagoCliente - mPagar;
                 vuelto[posVector] = vueltoCliente;
                 Console.WriteLine("El vuelto es de:  " + vueltoCliente);
 
@@ -605,7 +605,7 @@ class Program
         }
     }
 
-    // Implementa los métodos para los reportes según sea necesario
+
 
     static void VerTodosLosPagos()
     {
@@ -629,8 +629,8 @@ class Program
                 }
                 else
                 {
-                    Console.WriteLine(numeroPago[i].ToString().PadRight(8) + fecha[i].ToShortDateString().PadRight(11) + hora[i].ToString().PadRight(7) + cedula[i].ToString().PadRight(12) + nombre[i].ToString().PadRight(16) + apellido1[i].ToString().PadRight(20) + apellido2[i].ToString().PadRight(20) + montoPagaCliente[i].ToString().PadRight(22));
-                    mTotal = mTotal + montoPagaCliente[i];
+                    Console.WriteLine(numeroPago[i].ToString().PadRight(8) + fecha[i].ToShortDateString().PadRight(11) + hora[i].ToString().PadRight(7) + cedula[i].ToString().PadRight(12) + nombre[i].ToString().PadRight(16) + apellido1[i].ToString().PadRight(20) + apellido2[i].ToString().PadRight(20) + montoPagar[i].ToString().PadRight(22));
+                    mTotal = mTotal + montoPagar[i];
                     contador = contador + 1;
                 }
             }
@@ -684,8 +684,8 @@ class Program
                 {
                     if (tipoServicio[i] == tServicio)
                     {
-                        Console.WriteLine(numeroPago[i].ToString().PadRight(8) + fecha[i].ToShortDateString().PadRight(11) + hora[i].ToString().PadRight(7) + cedula[i].ToString().PadRight(12) + nombre[i].ToString().PadRight(16) + apellido1[i].ToString().PadRight(20) + apellido2[i].ToString().PadRight(20) + montoPagaCliente[i].ToString().PadRight(22));
-                        mTotal = mTotal + montoPagaCliente[i];
+                        Console.WriteLine(numeroPago[i].ToString().PadRight(8) + fecha[i].ToShortDateString().PadRight(11) + hora[i].ToString().PadRight(7) + cedula[i].ToString().PadRight(12) + nombre[i].ToString().PadRight(16) + apellido1[i].ToString().PadRight(20) + apellido2[i].ToString().PadRight(20) + montoPagar[i].ToString().PadRight(22));
+                        mTotal = mTotal + montoPagar[i];
                         contador = contador + 1;
                     }
                 }
@@ -740,8 +740,8 @@ class Program
                 {
                     if (numeroCaja[i] == nCaja)
                     {
-                        Console.WriteLine(numeroPago[i].ToString().PadRight(8) + fecha[i].ToShortDateString().PadRight(11) + hora[i].ToString().PadRight(7) + cedula[i].ToString().PadRight(12) + nombre[i].ToString().PadRight(16) + apellido1[i].ToString().PadRight(20) + apellido2[i].ToString().PadRight(20) + montoPagaCliente[i].ToString().PadRight(22));
-                        mTotal = mTotal + montoPagaCliente[i];
+                        Console.WriteLine(numeroPago[i].ToString().PadRight(8) + fecha[i].ToShortDateString().PadRight(11) + hora[i].ToString().PadRight(7) + cedula[i].ToString().PadRight(12) + nombre[i].ToString().PadRight(16) + apellido1[i].ToString().PadRight(20) + apellido2[i].ToString().PadRight(20) + montoPagar[i].ToString().PadRight(22));
+                        mTotal = mTotal + montoPagar[i];
                         contador = contador + 1;
                     }
                 }

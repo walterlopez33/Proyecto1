@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Randy\\.nuget\\packages\\": {}
+    "C:\\Users\\walter\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Minor_Murcia\\Servicios_Publicos\\Servicios_Publicos\\Servicios_Publicos.csproj",
+      "projectUniqueName": "C:\\Users\\walter\\Downloads\\Servicios_Publicos\\Servicios_Publicos\\Servicios_Publicos.csproj",
       "projectName": "Servicios_Publicos",
-      "projectPath": "D:\\Minor_Murcia\\Servicios_Publicos\\Servicios_Publicos\\Servicios_Publicos.csproj",
-      "packagesPath": "C:\\Users\\Randy\\.nuget\\packages\\",
-      "outputPath": "D:\\Minor_Murcia\\Servicios_Publicos\\Servicios_Publicos\\obj\\",
+      "projectPath": "C:\\Users\\walter\\Downloads\\Servicios_Publicos\\Servicios_Publicos\\Servicios_Publicos.csproj",
+      "packagesPath": "C:\\Users\\walter\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\walter\\Downloads\\Servicios_Publicos\\Servicios_Publicos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Randy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\walter\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
